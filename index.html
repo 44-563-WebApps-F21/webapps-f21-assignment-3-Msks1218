@@ -20,7 +20,75 @@
             <li>Their is nothing to bring you can get everything their</li>
             <li>you can bring pair of running shoes for exercise and playing games</li>
         </ul>
-        <img src="hanuman2.jpg">
-        <a href="C:\Users\S545520\webapps-f21-assignment-3-Msks1218\aboutme.html">link for aboutme</a>
+        <img src="https://wallpapercave.com/wp/wp4546177.jpg" alt="Image Missing" height="100px" width="100px">
+        <a href="C:\Users\S545520\webapps-f21-assignment-3-Msks1218\aboutme.html"> link for aboutme</a>
+        <hr>
+        <h4>Table creation</h4>
+        <table>
+            <tr>
+              <th>Food/Drinks</th>
+              <th>Location</th>
+              <th>Cost</th>
+            </tr>
+            <tr>
+              <td>pepsi</td>
+              <td>Canteen</td>
+              <td>free</td>
+            </tr>
+            <tr>
+              <td>French fries</td>
+              <td>McDonalds</td>
+              <td>$3.00</td>
+            </tr>
+            <tr>
+                <td>Burger</td>
+                <td>Burger king</td>
+                <td>$5.00</td>
+              </tr>
+            <tr>
+                <td>Hot wings</td>
+                <td>KFC</td>
+                <td>$4.00</td>
+            </tr>
+        </table>
+        <hr>
+        <h4>Code Display</h4>
+        <blockquote>
+            In graph theory, a component of an undirected graph is an induced subgraph 
+            in which any two vertices are connected to each other by paths, 
+            and which is connected to no additional vertices in the rest of the graph. 
+            For example, the graph shown in the illustration has three components. 
+            A vertex with no incident edges is itself a component. 
+            Components are also sometimes called connected components.
+        </blockquote>
+        <a href="https://en.wikipedia.org/wiki/Component_(graph_theory)"> Source code link</a>
+            <pre>
+                int n;
+                vector<int> g[MAXN] ;
+                bool used[MAXN] ;
+                vector<int> comp ;
+                void dfs(int v) {
+                used[v] = true ;
+                comp.push_back(v);
+                for (size_t i = 0; i < (int) g[v].size(); ++i) {
+                int to = g[v][i];
+                if (!used[to])
+                dfs(to);
+                }
+                }
+                void find_comps() {
+                for (int i = 0; i < n ; ++i)
+                used [i] = false;
+                for (int i = 0; i < n ; ++i)
+                if (!used[i]) {
+                comp.clear();
+                dfs(i);
+                cout << "Component:" ;
+                for (size_t j = 0; j < comp.size(); ++j)
+                cout << ' ' << comp[j];
+                cout << endl ;
+                }
+                }
+            </pre>
     </body>
 </html>
